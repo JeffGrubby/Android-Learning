@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LinearLayout 
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="20dp"
+    
+    > 
+        <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/test" />
+ 	<EditText 
+ 	     android:id="@+id/Input"
+ 	     android:inputType="phone"
+ 	     android:labelFor="@+id/Input"
+      	android:layout_width="fill_parent"
+       android:layout_height="wrap_content"
+      
+     />
+ 	<RelativeLayout 
+ 	    android:layout_width="match_parent"
+ 	    android:layout_height="wrap_content"
+ 	    android:layout_marginTop="10dp"
+ 	    android:layout_gravity="center"
+ 	    >
+	 	 <Button 
+	       android:id="@+id/button"
+	       android:layout_width="wrap_content"
+	       android:layout_height="wrap_content"
+	       android:text="@string/button"
+	    
+	        />
+	    <Button 
+	        android:id="@+id/viewMsg"
+	        android:layout_width="wrap_content"
+	       android:layout_height="wrap_content"
+	       android:text="@string/viewMsg"
+	       android:layout_toEndOf="@id/button"
+	        />
+    	 <Button 
+	        android:id="@+id/viewFile"
+	        android:layout_width="wrap_content"
+	       android:layout_height="wrap_content"
+	       android:text="@string/viewFile"
+	       android:layout_toEndOf="@id/viewMsg"
+	        />
+   
+ 	</RelativeLayout>
+
+    
+</LinearLayout>

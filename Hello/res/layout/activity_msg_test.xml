@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+         >
+	     <TextView
+	         android:id="@+id/labelOne"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:text="@string/tip_one" />
+	     
+		<EditText 
+		    android:id="@+id/input_one"
+		    android:inputType="phone"
+		    android:layout_width="match_parent"
+		    android:layout_height="wrap_content"
+		    android:labelFor="@+id/input_one"
+		    android:layout_alignTop="@id/labelOne"
+		    android:layout_toEndOf="@id/labelOne"
+		    android:layout_marginStart="20dp"
+		  android:background="@android:drawable/editbox_background"
+		    />
+  
+    </RelativeLayout>
+  
+	 <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/tip_two" />
+	<EditText 
+	    android:id="@+id/input_two"
+	    android:layout_width="fill_parent"
+	    android:layout_height="wrap_content"
+	    android:minLines="3"
+	    android:inputType="textMultiLine"
+	    android:labelFor="@+id/input_two"
+	    />
+	<Button 
+	    android:id="@+id/Message_Send"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:text="@string/send"
+	    />
+</LinearLayout>

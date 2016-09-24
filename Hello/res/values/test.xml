@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="test">MyFirstTest</string>
+    <string name="button">查询</string>
+    <string name="viewMsg">短信</string>
+    <string name="tip_one">请输入手机号</string>
+    <string name="tip_two">请输入短信内容</string>
+    <string name="send">发送</string>
+    <string name="success">发送成功</string>
+    <string name="fail">发送失败</string>
+  	<string name="viewFile">文件</string>
+  	<string name="save">保存</string>
+  	<string name="read">读取</string>
+  	<string name="tip_three">请输入文件位置</string>
+    <string name="tip_four">请输入文件内容</string>    
+</resources>
