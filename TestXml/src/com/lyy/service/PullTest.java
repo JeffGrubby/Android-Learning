@@ -1,11 +1,13 @@
 package com.lyy.service;
 
+import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.ArrayList;
 
 import org.xmlpull.v1.XmlPullParser;
 import org.xmlpull.v1.XmlPullParserException;
+import org.xmlpull.v1.XmlSerializer;
 
 import com.lyy.model.Person;
 
@@ -21,15 +23,15 @@ public class PullTest {
  * @throws IOException
  */
 	public static ArrayList<Person> pullFromXml(InputStream in) throws XmlPullParserException, IOException {
-		//XmlPullParser声明定义
+		// TODO XmlPullParser声明定义
 		XmlPullParser pullParser = Xml.newPullParser();
 		pullParser.setInput(in, "UTF-8");
-		//声明Persons列表和Person对象
+		// TODO 声明Persons列表和Person对象
 		ArrayList<Person> persons = null;
 		Person person = null;
-		//获取xml文档的标记类型 返回int值
+		// TODO 获取xml文档的标记类型 返回int值
 		int tag = pullParser.getEventType();
-		//循环读取 记录到Person 添加Person到Persons列表
+		// TODO 循环读取 记录到Person 添加Person到Persons列表
 		while(tag!=XmlPullParser.END_DOCUMENT){
 			switch (tag) {
 			case XmlPullParser.START_DOCUMENT:
@@ -59,14 +61,48 @@ public class PullTest {
 			default:
 				break;
 			}
-			//获取下一个标记
+			// TODO 获取下一个标记
 		tag = pullParser.next();
 		}
 		
 		return persons;
 	}
 	
-
+/**
+ * 
+ * @param outputStream 输出文件位置
+ * @param persons	输出对象列表
+ * @throws Exception
+ */
+	public static void pullFromBean(FileOutputStream outputStream,ArrayList<Person> persons) throws Exception{
+		
+		ArrayList<Person> people = persons;
+		
+		XmlSerializer serializer = Xml.newSerializer();
+		serializer.setOutput(outputStream, "UTF-8");
+		serializer.startDocument("UTF-8", true);
+		serializer.startTag(null, "Persons");
+		for (Person person : people) {
+			serializer.startTag(null, "Person");
+			serializer.attribute(null, "id", Integer.toString(person.getId()));
+			
+			serializer.startTag(null, "name");
+			serializer.text(person.getName());
+			serializer.endTag(null, "name");
+			
+			serializer.startTag(null, "sex");
+			serializer.text(person.getSex());
+			serializer.endTag(null, "sex");
+			
+			serializer.endTag(null, "Person");
+		}
+		serializer.endTag(null, "Persons");
+		serializer.endDocument();
+		outputStream.flush();
+		outputStream.close();
+	}
+	
+	
 	public PullTest() {
 		// TODO Auto-generated constructor stub
 	}

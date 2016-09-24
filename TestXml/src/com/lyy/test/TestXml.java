@@ -1,5 +1,7 @@
 package com.lyy.test;
 
+import java.io.File;
+import java.io.FileOutputStream;
 import java.io.InputStream;
 import java.util.ArrayList;
 
@@ -20,4 +22,16 @@ public class TestXml extends AndroidTestCase {
 		}	
 	}
 	
+	
+	public void test_two() throws Exception{
+		File file = new File(this.getContext().getFilesDir(), "king.xml");
+		FileOutputStream outputStream = new FileOutputStream(file);
+		
+		ArrayList<Person> persons = new ArrayList<Person>();
+		persons.add(new Person(01,"xi","boy"));
+		persons.add(new Person(01,"yi","girl"));
+		
+		PullTest.pullFromBean(outputStream, persons);
+		
+	}
 }
