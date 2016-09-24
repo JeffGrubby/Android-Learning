@@ -1,5 +1,6 @@
 package com.lyy.hello;
 
+import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.content.Intent;
 import android.net.Uri;
@@ -10,7 +11,9 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
+@SuppressLint("ShowToast")
 public class MainActivity extends Activity {
 	private EditText e;
 	
@@ -25,21 +28,24 @@ public class MainActivity extends Activity {
 		Button a =(Button)findViewById(R.id.viewMsg);
 		a.setOnClickListener(new MessageButtonListener());
 		
-		Button b = (Button)findViewById(R.id.button);
-		b.setOnClickListener(new InputButtonListener());
+		Button b = (Button)findViewById(R.id.call);
+		b.setOnClickListener(new CallListener());
 		
 		Button c =(Button)findViewById(R.id.viewFile);
 		c.setOnClickListener(new FileButtonListener());
 	}
 	
 	
-	private final class InputButtonListener implements View.OnClickListener{
+	private final class CallListener implements View.OnClickListener{
 
 		@Override
 		public void onClick(View v) {
 			// TODO Auto-generated method stub
 			String number  = e.getText().toString();
-			if(number.length()==0||null == number) return ;
+			if(number.length()==0||null == number){ 
+				Toast.makeText(getApplicationContext(), "Input your number to call", Toast.LENGTH_LONG).show();
+				return ;
+			}
 			Intent intent = new Intent();
 			intent.setAction("android.intent.action.CALL");
 //			intent.addCategory("android.intent.category.DEFAULT");

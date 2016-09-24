@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="test">MyFirstTest</string>
-    <string name="button">查询</string>
+    <string name="call">拨打</string>
     <string name="viewMsg">短信</string>
     <string name="tip_one">请输入手机号</string>
     <string name="tip_two">请输入短信内容</string>

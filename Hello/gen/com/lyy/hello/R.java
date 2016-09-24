@@ -29,7 +29,7 @@ public final class R {
         public static final int Input=0x7f080004;
         public static final int Message_Send=0x7f08000b;
         public static final int action_settings=0x7f08000c;
-        public static final int button=0x7f080005;
+        public static final int call=0x7f080005;
         public static final int input_four=0x7f080001;
         public static final int input_one=0x7f080009;
         public static final int input_three=0x7f080000;
@@ -53,7 +53,7 @@ public final class R {
     public static final class string {
         public static final int action_settings=0x7f050002;
         public static final int app_name=0x7f050000;
-        public static final int button=0x7f050006;
+        public static final int call=0x7f050006;
         public static final int fail=0x7f05000c;
         public static final int hello_world=0x7f050001;
         public static final int read=0x7f05000f;

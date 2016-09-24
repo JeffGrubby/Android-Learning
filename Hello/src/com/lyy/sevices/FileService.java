@@ -7,9 +7,13 @@ import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 
+import org.xmlpull.v1.XmlPullParser;
+import org.xmlpull.v1.XmlSerializer;
+
 import android.content.Context;
 import android.os.Environment;
 import android.util.Log;
+import android.util.Xml;
 
 public class FileService {
 	private Context context;
@@ -29,6 +33,7 @@ public class FileService {
 		FileOutputStream outputStream =context.openFileOutput(name, Context.MODE_PRIVATE);
 		outputStream.write(content.getBytes());
 		outputStream.close();
+			
 	}
 	
 	/**
