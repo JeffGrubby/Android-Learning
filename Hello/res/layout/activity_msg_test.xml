@@ -22,6 +22,8 @@
 		    android:labelFor="@+id/input_one"
 		    android:layout_alignTop="@id/labelOne"
 		    android:layout_toEndOf="@id/labelOne"
+		     android:layout_toRightOf="@id/labelOne"
+		     android:layout_marginLeft="20dp"
 		    android:layout_marginStart="20dp"
 		  android:background="@android:drawable/editbox_background"
 		    />

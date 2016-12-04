@@ -70,6 +70,7 @@ public class FileTestActivity extends Activity {
 			try {
 				String s = fileService.read(name);
 				Toast.makeText(getApplicationContext(), s, Toast.LENGTH_LONG).show();
+				fileContent.setText(s);
 			} catch (FileNotFoundException e) {
 				// TODO Auto-generated catch block
 				Log.d("End","not found");
