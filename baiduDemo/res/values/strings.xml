@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">baiduDemo</string>
+    <string name="hello_world">In</string>
+    <string name="action_settings">Settings</string>
+    <string name = "city">city</string>
+    <string name = "middle">to find</string>
+    <string name = "place">place</string>
+</resources>

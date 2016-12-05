@@ -1,8 +1,5 @@
 package com.lyy.mp3playerdemo;
 
-import android.support.v7.app.ActionBarActivity;
-import android.util.Log;
-
 import java.io.IOException;
 import java.util.ArrayList;
 
@@ -12,6 +9,8 @@ import android.database.Cursor;
 import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.provider.MediaStore;
+import android.support.v7.app.ActionBarActivity;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
