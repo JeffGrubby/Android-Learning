@@ -9,8 +9,28 @@
     tools:context="com.lyy.testxml.MainActivity" >
 
     <TextView
+        android:id="@+id/title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/hello_world" />
+
+    <Button
+        android:id="@+id/read"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/title"
+        android:layout_below="@+id/title"
+        android:layout_marginTop="19dp"
+        android:text="read" />
+
+    <Button
+        android:id="@+id/write"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/read"
+        android:layout_alignBottom="@+id/read"
+        android:layout_marginLeft="66dp"
+        android:layout_toRightOf="@+id/read"
+        android:text="write" />
 
 </RelativeLayout>
